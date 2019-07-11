@@ -22,6 +22,7 @@ drawboard()
 
 def isWon():
     return isrowwin()
+    return iscolwin()
 
 #this method will check if there are three same values in a single col
 #that will mean the player has won if it is true.
@@ -30,16 +31,19 @@ def iscolwin():
 
     for c in range(4):
         for r in range(4):
+            success= True
             back = None
             board[r][c]
             if back == None:
                 back = r
                 break
-            elif back != r:
+            elif back != r or back == '_':
+                success = False
                 break
-            elif back == '_':
-                break
+        if success == True:
             return True
+        return success
+
 
 
 #this method will check if there are three same values in a single row
