@@ -1,5 +1,6 @@
 showboard = [[[0,0],[0,1],[0,2]],[[1,0],[1,1],[1,2]],[[2,0],[2,1],[2,2]]]
 
+#comment.
 turn = 'player1'
 print "welcome to tictactoe PvP"
 print " type what is in these boxes to mark"
